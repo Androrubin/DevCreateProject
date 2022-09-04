@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cardTitles">
+   <item >Electronics </item>
+    <item > Clothing</item>
+    <item >earphones</item>
+        <item >Footwear</item>
+        <item >Home Items</item>
+
+    </string-array>
+
+
+
+
+</resources>
