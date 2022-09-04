@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFBFBF">
+
+
+    <ImageView
+        android:id="@+id/asset1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="80dp"
+        android:src="@drawable/ic_asset_1_1" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="435dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:cardCornerRadius="26dp" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Discounts,Simplified"
+                android:textSize="26dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_marginTop="25dp"
+                android:layout_width="335dp"
+                android:layout_height="87dp"
+                android:layout_below="@+id/txt1"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:text="We believe that Green is Good and are here to
+                 enable Indians to access plants in the easiest way possible – online! We are here to shape the future of gardening!"/>
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_marginTop="25dp"
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_group_6910"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/txt2"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:id="@+id/next_1"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button"
+                android:padding="8dp"
+                android:text="Get Started"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
