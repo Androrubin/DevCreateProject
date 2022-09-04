@@ -6,20 +6,20 @@
     app:startDestination="@+id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/home_screen"
         android:name="com.abhishekb.devcreateproject.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/upload_c"
         android:name="com.abhishekb.devcreateproject.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="Upload"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/profile"
         android:name="com.abhishekb.devcreateproject.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="Profile"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

@@ -1,42 +1,92 @@
 package com.abhishekb.devcreateproject.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.abhishekb.devcreateproject.databinding.FragmentHomeBinding
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.abhishekb.devcreateproject.*
+import com.abhishekb.devcreateproject.ui.dashboard.Food
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class HomeFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
+    private lateinit var Item1:CardView
+    private lateinit var Item2:CardView
+    private lateinit var Item3:CardView
+    private lateinit var Item4:CardView
+    private lateinit var gridView: RecyclerView
+    private lateinit var gridList:ArrayList<Grid>
+    //private lateinit var adapter: GridAdapter
+    private lateinit var mAuth: FirebaseAuth
+    private lateinit var mDbRef: DatabaseReference
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+//        mAuth = FirebaseAuth.getInstance()
+//        mDbRef = FirebaseDatabase.getInstance().getReference()
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+
+
+//        val cardTitle : Array<String> = resources.getStringArray(R.array.cardTitles)
+//        val carImage : Array<String> = resources.getStringArray(R.array.cardImages)
+//
+//         adapter = GridAdapter(cardTitle,carImage)
+//        val gridLayout = GridLayoutManager(requireContext(),2)
+//        gridView = view.findViewById(R.id.cupon_gridView)
+//        gridView.layoutManager= gridLayout
+//        gridView.adapter=adapter
+
+
+         Item1=view.findViewById(R.id.item1)
+        Item2=view.findViewById(R.id.item1)
+        Item1=view.findViewById(R.id.item1)
+        Item1=view.findViewById(R.id.item1)
+
+        Item1.setOnClickListener {
+            startActivity(Intent(requireContext(), Electronics::class.java))
+
         }
-        return root
+        Item2.setOnClickListener {
+            startActivity(Intent(requireContext(), Earphones::class.java))
+
+        }
+        Item3.setOnClickListener {
+            startActivity(Intent(requireContext(), Clothing::class.java))
+
+        }
+        Item4.setOnClickListener {
+            startActivity(Intent(requireContext(), Food::class.java))
+
+        }
+
+
+
+//        gridList = ArrayList()
+//        gridImgList= ArrayList()
+//        adapter = GridAdapter(requireContext(),,)
+
+        //gridView = view.findViewById(R.id.cupon_gridView)
+
+       // gridView.layoutManager= LinearLayoutManager(requireContext())
+        //gridView.adapter = adapter
+
+
+        return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+
+
+
+
 }
